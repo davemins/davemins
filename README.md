@@ -10,6 +10,7 @@
     <br>
     <img src="https://img.shields.io/badge/-Git-grey?style=for-the-badge&logo=git">
     <img src="https://img.shields.io/badge/-GitHub-grey?style=for-the-badge&logo=github">
+    <img src="https://img.shields.io/badge/-notion-grey?style=for-the-badge&logo=notion">
 </p><br><br>
 
 <p align="center" display="inline-block">
