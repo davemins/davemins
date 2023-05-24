@@ -4,7 +4,7 @@
 </p><br><br>
 
 <p align="center" display="inline-block">
-    <Strong>⚒️잘 다루는 기술⚒️</Strong><br><br>
+    <Strong>⚒️t사용하고 있는 기술⚒️</Strong><br><br>
     <img src="https://img.shields.io/badge/-Python-grey?style=for-the-badge&logo=Python">
     <img src="https://img.shields.io/badge/-Django-grey?style=for-the-badge&logo=Django">
     <img src="https://img.shields.io/badge/-MySQL-grey?style=for-the-badge&logo=mysql">
@@ -15,7 +15,7 @@
 </p><br><br>
 
 <p align="center" display="inline-block">
-    <Strong>⚒️아직은 부족해요⚒️</Strong><br><br>
+    <Strong>⚒️아직은 부족한 기술⚒️</Strong><br><br>
     <img src="https://img.shields.io/badge/-HTML5-grey?style=for-the-badge&logo=html5"> 
     <img src="https://img.shields.io/badge/-CSS3-grey?style=for-the-badge&logo=css3"> 
     <img src="https://img.shields.io/badge/-JavaScript-grey?style=for-the-badge&logo=javascript">
@@ -29,7 +29,7 @@
 </p><br><br>
 
 <p align="center" display="inline-block">
-    <Strong>💡공부중인 것들💡</Strong><br><br>
+    <Strong>💡공부💡</Strong><br><br>
     <img src="https://img.shields.io/badge/-JAVA-grey?style=for-the-badge&logo=JAVA">
     <img src="https://img.shields.io/badge/-Spring-grey?style=for-the-badge&logo=Spring">
     <img src="https://img.shields.io/badge/-SpringBoot-grey?style=for-the-badge&logo=SpringBoot">
