@@ -1,9 +1,4 @@
 <p align="center" display="inline-block">
-    <img src="https://github-readme-stats.vercel.app/api?username=davemins&show_icons=true&theme=graywhite"/>
-    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=davemins&langs_count=4&count_private=true&theme=graywhite"/>
-</p><br><br>
-
-<p align="center" display="inline-block">
     <Strong>⚒️사용하고 있는 기술⚒️</Strong><br><br>
     <img src="https://img.shields.io/badge/-Python-grey?style=for-the-badge&logo=Python">
     <img src="https://img.shields.io/badge/-Django-grey?style=for-the-badge&logo=Django">
