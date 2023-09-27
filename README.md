@@ -1,5 +1,6 @@
 <p align="center" display="inline-block">
     <Strong>⚒️사용하고 있는 기술⚒️</Strong><br><br>
+    <img src="https://img.shields.io/badge/-JAVA-grey?style=for-the-badge&logo=JAVA">
     <img src="https://img.shields.io/badge/-Python-grey?style=for-the-badge&logo=Python">
     <img src="https://img.shields.io/badge/-Django-grey?style=for-the-badge&logo=Django">
     <img src="https://img.shields.io/badge/-MySQL-grey?style=for-the-badge&logo=mysql">
@@ -25,7 +26,6 @@
 
 <p align="center" display="inline-block">
     <Strong>💡공부하고 있는 것💡</Strong><br><br>
-    <img src="https://img.shields.io/badge/-JAVA-grey?style=for-the-badge&logo=JAVA">
     <img src="https://img.shields.io/badge/-Spring-grey?style=for-the-badge&logo=Spring">
     <img src="https://img.shields.io/badge/-SpringBoot-grey?style=for-the-badge&logo=SpringBoot">
     <img src="https://img.shields.io/badge/-Linux-grey?style=for-the-badge&logo=Linux">
