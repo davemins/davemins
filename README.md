@@ -3,7 +3,6 @@
     <img src="https://img.shields.io/badge/-JAVA-grey?style=for-the-badge&logo=JAVA">
     <img src="https://img.shields.io/badge/-Python-grey?style=for-the-badge&logo=Python">
     <img src="https://img.shields.io/badge/-Django-grey?style=for-the-badge&logo=Django">
-    <img src="https://img.shields.io/badge/-MySQL-grey?style=for-the-badge&logo=mysql">
     <br>
     <img src="https://img.shields.io/badge/-Git-grey?style=for-the-badge&logo=git">
     <img src="https://img.shields.io/badge/-GitHub-grey?style=for-the-badge&logo=github">
@@ -15,6 +14,7 @@
     <img src="https://img.shields.io/badge/-HTML5-grey?style=for-the-badge&logo=html5"> 
     <img src="https://img.shields.io/badge/-CSS3-grey?style=for-the-badge&logo=css3"> 
     <img src="https://img.shields.io/badge/-JavaScript-grey?style=for-the-badge&logo=javascript">
+    <img src="https://img.shields.io/badge/-MySQL-grey?style=for-the-badge&logo=mysql">
 </p><br><br>
 
 <p align="center" display="inline-block">
