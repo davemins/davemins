@@ -11,6 +11,9 @@ frontend/dist/
 frontend/.env
 frontend/.env.local
 
+# ===== 민감 파일 =====
+claude.md
+
 # ===== OS =====
 .DS_Store
 Thumbs.db
