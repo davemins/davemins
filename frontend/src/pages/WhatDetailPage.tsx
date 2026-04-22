@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { useWork } from '../hooks/useWork'
+import { useLang } from '../contexts/LangContext'
 import styles from './WhatDetailPage.module.css'
 
 const PLACEHOLDER_TAGS = ['Figma', 'Illustrator', 'After Effects']
@@ -12,22 +13,23 @@ const PLACEHOLDER_IMAGES = [
 
 function WhatDetailPage() {
   const { id } = useParams<{ id: string }>()
-  const { data, loading } = useWork(Number(id))
+  const { lang, t } = useLang()
+  const { data, loading } = useWork(Number(id), lang)
 
   if (loading) return null
 
   if (!data) {
     return (
       <main className={styles.main}>
-        <p className={styles.notFound}>작업물을 찾을 수 없습니다.</p>
-        <Link to="/what" className={styles.back}>← what</Link>
+        <p className={styles.notFound}>{t.what.notFound}</p>
+        <Link to={`/${lang}/what`} className={styles.back}>{t.what.back}</Link>
       </main>
     )
   }
 
   return (
     <main className={styles.main}>
-      <Link to="/what" className={styles.back}>← what</Link>
+      <Link to={`/${lang}/what`} className={styles.back}>{t.what.back}</Link>
 
       <div className={styles.hero}>
         <img
@@ -48,7 +50,7 @@ function WhatDetailPage() {
           <h1 className={styles.title}>{data.title}</h1>
           {data.projectUrl && (
             <a href={data.projectUrl} target="_blank" rel="noopener noreferrer" className={styles.linkBtn}>
-              프로젝트 보기 ↗
+              {t.what.projectLink}
             </a>
           )}
         </div>
@@ -62,11 +64,8 @@ function WhatDetailPage() {
         </div>
 
         <div className={styles.section}>
-          <h2 className={styles.sectionTitle}>작업 과정</h2>
-          <p className={styles.body}>
-            이 프로젝트는 초기 아이디어 스케치부터 최종 결과물까지 약 3주에 걸쳐 진행되었습니다.
-            레퍼런스 수집 → 방향 설정 → 시안 제작 → 수정 → 최종 납품 순서로 작업했습니다.
-          </p>
+          <h2 className={styles.sectionTitle}>{t.what.processTitle}</h2>
+          <p className={styles.body}>{t.what.processBody}</p>
         </div>
 
         <div className={styles.gallery}>

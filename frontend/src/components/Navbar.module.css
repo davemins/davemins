@@ -17,7 +17,7 @@
 }
 
 .logo {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: 500;
   color: var(--fg);
   letter-spacing: 0.02em;
@@ -31,7 +31,7 @@
 }
 
 .link {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--fg-muted);
   transition: color 0.15s;
   outline: none;
@@ -43,5 +43,28 @@
 }
 
 .active {
+  color: var(--fg);
+}
+
+.langs {
+  display: flex;
+  gap: var(--space-2);
+  margin-left: var(--space-4);
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--border);
+}
+
+.langBtn {
+  font-size: var(--text-xs);
+  color: var(--fg-subtle);
+  transition: color 0.15s;
+  letter-spacing: 0.03em;
+}
+
+.langBtn:hover {
+  color: var(--fg-muted);
+}
+
+.langActive {
   color: var(--fg);
 }

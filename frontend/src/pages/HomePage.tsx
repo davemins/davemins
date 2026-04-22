@@ -1,18 +1,25 @@
 import { Link } from 'react-router-dom'
+import { useLang } from '../contexts/LangContext'
 import styles from './HomePage.module.css'
 
-const LINKS = [
-  { to: '/who', label: 'who', desc: '어떤 사람인지' },
-  { to: '/what', label: 'what', desc: '무엇을 만들었는지' },
-  { to: '/how', label: 'how', desc: '어떻게 생각하는지' },
-]
-
 function HomePage() {
+  const { lang, t } = useLang()
+
+  const LINKS = [
+    { to: `/${lang}/who`, label: 'who', desc: t.home.whoDesc },
+    { to: `/${lang}/what`, label: 'what', desc: t.home.whatDesc },
+    { to: `/${lang}/how`, label: 'how', desc: t.home.howDesc },
+  ]
+
   return (
     <main className={styles.main}>
       <section className={styles.intro}>
         <h1 className={styles.name}>davemins</h1>
-        <p className={styles.tagline}>영상, 디자인, 코드로<br />이야기를 만듭니다.</p>
+        <p className={styles.tagline}>
+          {t.home.tagline.split('\n').map((line, i, arr) => (
+            <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+          ))}
+        </p>
       </section>
 
       <nav className={styles.nav}>

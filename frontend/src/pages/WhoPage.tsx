@@ -1,8 +1,10 @@
 import { useWho } from '../hooks/useWho'
+import { useLang } from '../contexts/LangContext'
 import styles from './WhoPage.module.css'
 
 function WhoPage() {
-  const { data, loading } = useWho()
+  const { lang } = useLang()
+  const { data, loading } = useWho(lang)
 
   if (loading) return null
 

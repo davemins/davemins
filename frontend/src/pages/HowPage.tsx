@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
 import { usePosts } from '../hooks/usePosts'
+import { useLang } from '../contexts/LangContext'
 import styles from './HowPage.module.css'
 
 function HowPage() {
-  const { data, loading } = usePosts()
+  const { lang } = useLang()
+  const { data, loading } = usePosts(lang)
 
   if (loading) return null
 
@@ -12,7 +14,7 @@ function HowPage() {
       <ul className={styles.list}>
         {data.map((post) => (
           <li key={post.slug}>
-            <Link to={`/how/${post.slug}`} className={styles.item}>
+            <Link to={`/${lang}/how/${post.slug}`} className={styles.item}>
               <div className={styles.meta}>
                 <time className={styles.date}>{post.publishedAt}</time>
               </div>

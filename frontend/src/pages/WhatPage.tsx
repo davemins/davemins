@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useWorks } from '../hooks/useWorks'
+import { useLang } from '../contexts/LangContext'
 import type { WorkCategory } from '../types/what'
 import styles from './WhatPage.module.css'
 
@@ -12,8 +13,9 @@ const CATEGORIES: { value: WorkCategory | undefined; label: string }[] = [
 
 function WhatPage() {
   const navigate = useNavigate()
+  const { lang } = useLang()
   const [category, setCategory] = useState<WorkCategory | undefined>(undefined)
-  const { data, loading } = useWorks('ko', category)
+  const { data, loading } = useWorks(lang, category)
 
   return (
     <main className={styles.main}>
@@ -35,7 +37,7 @@ function WhatPage() {
             <li
               key={item.id}
               className={styles.card}
-              onClick={() => navigate(`/what/${item.id}`)}
+              onClick={() => navigate(`/${lang}/what/${item.id}`)}
             >
               <div className={styles.thumb} />
               <div className={styles.info}>
