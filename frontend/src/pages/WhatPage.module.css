@@ -1,6 +1,6 @@
 .main {
   flex: 1;
-  max-width: var(--max-width-wide);
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: var(--space-12) var(--space-6);
   width: 100%;
@@ -39,7 +39,7 @@
 .grid {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-6);
 }
 

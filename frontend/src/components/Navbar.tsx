@@ -10,22 +10,24 @@ const NAV_ITEMS = [
 function Navbar() {
   return (
     <header className={styles.header}>
-      <NavLink to="/" className={styles.logo}>
-        davemins
-      </NavLink>
-      <nav className={styles.nav}>
-        {NAV_ITEMS.map(({ to, label }) => (
-          <NavLink
-            key={to}
-            to={to}
-            className={({ isActive }) =>
-              isActive ? `${styles.link} ${styles.active}` : styles.link
-            }
-          >
-            {label}
-          </NavLink>
-        ))}
-      </nav>
+      <div className={styles.inner}>
+        <NavLink to="/" className={styles.logo}>
+          davemins
+        </NavLink>
+        <nav className={styles.nav}>
+          {NAV_ITEMS.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              className={({ isActive }) =>
+                isActive ? `${styles.link} ${styles.active}` : styles.link
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
     </header>
   )
 }
