@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import WhoPage from './pages/WhoPage'
 import WhatPage from './pages/WhatPage'
+import WhatDetailPage from './pages/WhatDetailPage'
 import HowPage from './pages/HowPage'
 import HowDetailPage from './pages/HowDetailPage'
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/who" element={<WhoPage />} />
         <Route path="/what" element={<WhatPage />} />
+        <Route path="/what/:id" element={<WhatDetailPage />} />
         <Route path="/how" element={<HowPage />} />
         <Route path="/how/:slug" element={<HowDetailPage />} />
       </Routes>

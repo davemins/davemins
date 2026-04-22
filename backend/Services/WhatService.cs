@@ -12,7 +12,7 @@ public class WhatService
             Description: new("도시의 빛과 그림자를 담은 사진 시리즈", "A photo series capturing light and shadow in the city", "Una serie fotográfica que captura luz y sombra en la ciudad"),
             Category: "visual",
             ThumbnailUrl: null,
-            ProjectUrl: null,
+            ProjectUrl: "https://www.behance.net/davemins",
             Year: 2024
         ),
         new(
@@ -21,7 +21,7 @@ public class WhatService
             Description: new("정지와 움직임 사이의 순간을 담은 그래픽 작업", "Graphic work capturing moments between stillness and movement", "Trabajo gráfico que captura momentos entre quietud y movimiento"),
             Category: "visual",
             ThumbnailUrl: null,
-            ProjectUrl: null,
+            ProjectUrl: "https://www.behance.net/davemins",
             Year: 2024
         ),
         new(
@@ -30,7 +30,7 @@ public class WhatService
             Description: new("유체 시뮬레이션 기반의 모션 그래픽", "Motion graphics based on fluid simulation", "Gráficos en movimiento basados en simulación de fluidos"),
             Category: "motion",
             ThumbnailUrl: null,
-            ProjectUrl: null,
+            ProjectUrl: "https://vimeo.com/davemins",
             Year: 2025
         ),
         new(
@@ -39,7 +39,7 @@ public class WhatService
             Description: new("반복과 변주로 만든 애니메이션 루프", "Animation loop made with repetition and variation", "Bucle de animación creado con repetición y variación"),
             Category: "motion",
             ThumbnailUrl: null,
-            ProjectUrl: null,
+            ProjectUrl: "https://vimeo.com/davemins",
             Year: 2025
         ),
     ];
