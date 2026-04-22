@@ -1,6 +1,12 @@
+using davemins.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddSingleton<WhoService>();
+builder.Services.AddSingleton<WhatService>();
+builder.Services.AddSingleton<HowService>();
+builder.Services.AddSingleton<ContactService>();
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
