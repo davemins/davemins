@@ -95,6 +95,15 @@
   color: var(--fg-muted);
 }
 
+.article ul,
+.article ol {
+  padding-left: var(--space-5);
+}
+
+.article li {
+  color: var(--fg-muted);
+}
+
 .notFound {
   font-size: var(--text-sm);
   color: var(--fg-muted);

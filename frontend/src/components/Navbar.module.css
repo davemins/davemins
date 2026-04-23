@@ -32,6 +32,10 @@
 }
 
 @media (max-width: 640px) {
+  .inner {
+    padding: 0 var(--space-4);
+  }
+
   .nav {
     gap: var(--space-3);
   }
