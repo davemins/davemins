@@ -52,3 +52,17 @@
   color: var(--fg-muted);
   line-height: 1.7;
 }
+
+@media (max-width: 640px) {
+  .main {
+    padding: var(--space-10) var(--space-4);
+  }
+
+  .item {
+    padding: var(--space-8) 0;
+  }
+
+  .title {
+    font-size: var(--text-lg);
+  }
+}

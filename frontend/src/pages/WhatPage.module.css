@@ -43,6 +43,18 @@
   gap: var(--space-6);
 }
 
+@media (max-width: 640px) {
+  .main {
+    padding: var(--space-8) var(--space-4);
+    gap: var(--space-8);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;

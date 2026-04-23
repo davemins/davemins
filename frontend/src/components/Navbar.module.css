@@ -27,7 +27,24 @@
 
 .nav {
   display: flex;
+  align-items: center;
   gap: var(--space-6);
+}
+
+@media (max-width: 640px) {
+  .nav {
+    gap: var(--space-3);
+  }
+
+  .link {
+    font-size: var(--text-sm);
+  }
+
+  .langs {
+    margin-left: var(--space-2);
+    padding-left: var(--space-2);
+    gap: var(--space-2);
+  }
 }
 
 .link {

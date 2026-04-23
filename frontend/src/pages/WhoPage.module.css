@@ -81,3 +81,14 @@
 .link:hover {
   color: var(--fg);
 }
+
+@media (max-width: 640px) {
+  .main {
+    padding: var(--space-10) var(--space-4);
+    gap: var(--space-10);
+  }
+
+  .name {
+    font-size: var(--text-2xl);
+  }
+}
