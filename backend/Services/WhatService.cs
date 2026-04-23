@@ -14,19 +14,31 @@ public class WhatService(string contentRoot)
             .OrderBy(f => f)
             .Select(path =>
             {
-                var (meta, _) = FrontmatterParser.Parse(File.ReadAllText(path));
-                return meta;
+                var (meta, body) = FrontmatterParser.Parse(File.ReadAllText(path));
+                return (meta, body);
             })
-            .Where(meta => meta.Count > 0)
-            .Select(meta => new WorkItemDto(
-                Id: int.TryParse(meta.GetValueOrDefault("id"), out var id) ? id : 0,
-                Title: meta.GetValueOrDefault($"title_{lang}") ?? meta.GetValueOrDefault("title_ko") ?? "",
-                Description: meta.GetValueOrDefault($"description_{lang}") ?? meta.GetValueOrDefault("description_ko") ?? "",
-                Category: meta.GetValueOrDefault("category") ?? "",
-                ThumbnailUrl: meta.GetValueOrDefault("thumbnailUrl"),
-                ProjectUrl: meta.GetValueOrDefault("projectUrl"),
-                Year: int.TryParse(meta.GetValueOrDefault("year"), out var year) ? year : 0
-            ))
+            .Where(x => x.meta.Count > 0)
+            .Select(x =>
+            {
+                var (meta, body) = x;
+                var tags = (meta.GetValueOrDefault("tags") ?? "")
+                    .Split(',')
+                    .Select(t => t.Trim())
+                    .Where(t => !string.IsNullOrEmpty(t))
+                    .ToList();
+
+                return new WorkItemDto(
+                    Id: int.TryParse(meta.GetValueOrDefault("id"), out var id) ? id : 0,
+                    Title: meta.GetValueOrDefault($"title_{lang}") ?? meta.GetValueOrDefault("title_ko") ?? "",
+                    Description: meta.GetValueOrDefault($"description_{lang}") ?? meta.GetValueOrDefault("description_ko") ?? "",
+                    Category: meta.GetValueOrDefault("category") ?? "",
+                    ThumbnailUrl: meta.GetValueOrDefault("thumbnailUrl"),
+                    ProjectUrl: meta.GetValueOrDefault("projectUrl"),
+                    Year: int.TryParse(meta.GetValueOrDefault("year"), out var year) ? year : 0,
+                    Tags: tags,
+                    Content: body
+                );
+            })
             .ToList();
     }
 

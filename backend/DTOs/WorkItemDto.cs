@@ -7,5 +7,7 @@ public record WorkItemDto(
     string Category,
     string? ThumbnailUrl,
     string? ProjectUrl,
-    int Year
+    int Year,
+    List<string> Tags,
+    string Content
 );

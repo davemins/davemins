@@ -3,14 +3,6 @@ import { useWork } from '../hooks/useWork'
 import { useLang } from '../contexts/LangContext'
 import styles from './WhatDetailPage.module.css'
 
-const PLACEHOLDER_TAGS = ['Figma', 'Illustrator', 'After Effects']
-
-const PLACEHOLDER_IMAGES = [
-  'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-  'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&q=80',
-  'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
-]
-
 function WhatDetailPage() {
   const { id } = useParams<{ id: string }>()
   const { lang, t } = useLang()
@@ -31,14 +23,6 @@ function WhatDetailPage() {
     <main className={styles.main}>
       <Link to={`/${lang}/what`} className={styles.back}>{t.what.back}</Link>
 
-      <div className={styles.hero}>
-        <img
-          src={PLACEHOLDER_IMAGES[data.id % PLACEHOLDER_IMAGES.length]}
-          alt={data.title}
-          className={styles.heroImg}
-        />
-      </div>
-
       <div className={styles.info}>
         <div className={styles.meta}>
           <span className={styles.category}>{data.category}</span>
@@ -57,22 +41,20 @@ function WhatDetailPage() {
 
         <p className={styles.desc}>{data.description}</p>
 
-        <div className={styles.tags}>
-          {PLACEHOLDER_TAGS.map(tag => (
-            <span key={tag} className={styles.tag}>{tag}</span>
-          ))}
-        </div>
+        {data.tags.length > 0 && (
+          <div className={styles.tags}>
+            {data.tags.map(tag => (
+              <span key={tag} className={styles.tag}>{tag}</span>
+            ))}
+          </div>
+        )}
 
-        <div className={styles.section}>
-          <h2 className={styles.sectionTitle}>{t.what.processTitle}</h2>
-          <p className={styles.body}>{t.what.processBody}</p>
-        </div>
-
-        <div className={styles.gallery}>
-          {PLACEHOLDER_IMAGES.map((src, i) => (
-            <img key={i} src={src} alt={`${data.title} ${i + 1}`} className={styles.galleryImg} />
-          ))}
-        </div>
+        {data.content && (
+          <div className={styles.section}>
+            <h2 className={styles.sectionTitle}>{t.what.processTitle}</h2>
+            <p className={styles.body}>{data.content}</p>
+          </div>
+        )}
       </div>
     </main>
   )

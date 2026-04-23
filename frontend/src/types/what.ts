@@ -8,4 +8,6 @@ export interface WorkItem {
   thumbnailUrl: string | null
   projectUrl: string | null
   year: number
+  tags: string[]
+  content: string
 }
