@@ -10,6 +10,7 @@ public class WhoController(WhoService whoService) : ControllerBase
     [HttpGet]
     public IActionResult Get([FromQuery] string lang = "ko")
     {
-        return Ok(whoService.GetProfile(lang));
+        var profile = whoService.GetProfile(lang);
+        return profile is null ? NotFound() : Ok(profile);
     }
 }

@@ -1,11 +1,12 @@
 using davemins.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+var contentRoot = Path.Combine(builder.Environment.ContentRootPath, "content");
 
 builder.Services.AddControllers();
-builder.Services.AddSingleton<WhoService>();
-builder.Services.AddSingleton<WhatService>();
-builder.Services.AddSingleton<HowService>();
+builder.Services.AddSingleton(new WhoService(contentRoot));
+builder.Services.AddSingleton(new WhatService(contentRoot));
+builder.Services.AddSingleton(new HowService(contentRoot));
 builder.Services.AddSingleton<ContactService>();
 builder.Services.AddCors(options =>
 {

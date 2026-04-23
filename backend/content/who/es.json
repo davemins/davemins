@@ -1,0 +1,10 @@
+{
+  "name": "davemins",
+  "role": "Creador",
+  "bio": "Un creador que cuenta historias a través de video, diseño y código. Construyendo contenido y productos con experiencia como PM de TI.",
+  "skills": ["Videografía · Edición", "Gráficos en movimiento", "Diseño UI/UX", "Desarrollo Frontend"],
+  "socialLinks": [
+    { "platform": "GitHub", "url": "https://github.com/davemins" },
+    { "platform": "Instagram", "url": "https://instagram.com/davemins" }
+  ]
+}
