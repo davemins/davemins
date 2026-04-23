@@ -9,5 +9,7 @@ public record WorkItemDto(
     string? ProjectUrl,
     int Year,
     List<string> Tags,
-    string Content
+    string Content,
+    string? CoverImage,
+    List<string> Images
 );

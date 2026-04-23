@@ -19,6 +19,20 @@
   color: var(--fg);
 }
 
+.cover {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.coverImg {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
 .info {
   display: flex;
   flex-direction: column;
@@ -112,6 +126,26 @@
 
 .linkBtn:hover {
   color: var(--fg);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.boardImg {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.boardImg:first-child:nth-last-child(odd) {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
 }
 
 .notFound {

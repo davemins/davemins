@@ -7,7 +7,9 @@ public class WhatService(string contentRoot)
 {
     private List<WorkItemDto> LoadAll(string lang)
     {
-        var dir = Path.Combine(contentRoot, "works");
+        var dir = Path.Combine(contentRoot, "works", lang);
+        if (!Directory.Exists(dir))
+            dir = Path.Combine(contentRoot, "works", "ko");
         if (!Directory.Exists(dir)) return [];
 
         return Directory.GetFiles(dir, "*.md")
@@ -21,22 +23,18 @@ public class WhatService(string contentRoot)
             .Select(x =>
             {
                 var (meta, body) = x;
-                var tags = (meta.GetValueOrDefault("tags") ?? "")
-                    .Split(',')
-                    .Select(t => t.Trim())
-                    .Where(t => !string.IsNullOrEmpty(t))
-                    .ToList();
-
                 return new WorkItemDto(
                     Id: int.TryParse(meta.GetValueOrDefault("id"), out var id) ? id : 0,
-                    Title: meta.GetValueOrDefault($"title_{lang}") ?? meta.GetValueOrDefault("title_ko") ?? "",
-                    Description: meta.GetValueOrDefault($"description_{lang}") ?? meta.GetValueOrDefault("description_ko") ?? "",
+                    Title: meta.GetValueOrDefault("title") ?? "",
+                    Description: meta.GetValueOrDefault("description") ?? "",
                     Category: meta.GetValueOrDefault("category") ?? "",
                     ThumbnailUrl: meta.GetValueOrDefault("thumbnailUrl"),
-                    ProjectUrl: meta.GetValueOrDefault("projectUrl"),
+                    ProjectUrl: NullIfEmpty(meta.GetValueOrDefault("projectUrl")),
                     Year: int.TryParse(meta.GetValueOrDefault("year"), out var year) ? year : 0,
-                    Tags: tags,
-                    Content: body
+                    Tags: ParseList(meta.GetValueOrDefault("tags")),
+                    Content: body,
+                    CoverImage: NullIfEmpty(meta.GetValueOrDefault("coverImage")),
+                    Images: ParseList(meta.GetValueOrDefault("images"))
                 );
             })
             .ToList();
@@ -54,4 +52,11 @@ public class WhatService(string contentRoot)
     {
         return LoadAll(lang).FirstOrDefault(i => i.Id == id);
     }
+
+    private static List<string> ParseList(string? value) =>
+        string.IsNullOrWhiteSpace(value) ? [] :
+        value.Split(',').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)).ToList();
+
+    private static string? NullIfEmpty(string? value) =>
+        string.IsNullOrWhiteSpace(value) ? null : value;
 }

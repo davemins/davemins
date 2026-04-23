@@ -10,4 +10,6 @@ export interface WorkItem {
   year: number
   tags: string[]
   content: string
+  coverImage: string | null
+  images: string[]
 }

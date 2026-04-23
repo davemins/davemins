@@ -23,6 +23,12 @@ function WhatDetailPage() {
     <main className={styles.main}>
       <Link to={`/${lang}/what`} className={styles.back}>{t.what.back}</Link>
 
+      {data.coverImage && (
+        <div className={styles.cover}>
+          <img src={data.coverImage} alt={data.title} className={styles.coverImg} />
+        </div>
+      )}
+
       <div className={styles.info}>
         <div className={styles.meta}>
           <span className={styles.category}>{data.category}</span>
@@ -53,6 +59,14 @@ function WhatDetailPage() {
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>{t.what.processTitle}</h2>
             <p className={styles.body}>{data.content}</p>
+          </div>
+        )}
+
+        {data.images.length > 0 && (
+          <div className={styles.board}>
+            {data.images.map((src, i) => (
+              <img key={i} src={src} alt={`${data.title} ${i + 1}`} className={styles.boardImg} />
+            ))}
           </div>
         )}
       </div>
