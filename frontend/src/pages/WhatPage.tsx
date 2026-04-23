@@ -39,7 +39,10 @@ function WhatPage() {
               className={styles.card}
               onClick={() => navigate(`/${lang}/what/${item.id}`)}
             >
-              <div className={styles.thumb} />
+              {item.thumbnailUrl
+                ? <img src={item.thumbnailUrl} alt={item.title} className={styles.thumbImg} />
+                : <div className={styles.thumb} />
+              }
               <div className={styles.info}>
                 <span className={styles.category}>{item.category}</span>
                 <h2 className={styles.title}>{item.title}</h2>
