@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="content\**\*" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>
