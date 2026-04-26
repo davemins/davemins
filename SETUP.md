@@ -94,35 +94,29 @@ POST /api/contact
 
 ## 배포
 
-### 프론트엔드 (S3 + CloudFront)
+### 프론트엔드 (Vercel)
 
 ```bash
 cd frontend
 cp .env.example .env
 # .env에서 VITE_API_BASE_URL 설정 (백엔드 도메인)
 npm run build
-# dist/ 폴더를 S3에 업로드
+# Vercel에 GitHub 연동으로 자동 배포
 ```
 
-CloudFront 설정:
-- `/*` → S3 버킷
-- SPA 라우팅: 오류 페이지 403/404 → `/index.html` (200)
+Vercel 환경변수:
+- `VITE_API_BASE_URL` = 백엔드 Render 도메인
 
-### 백엔드 (EC2)
-
-`appsettings.json`의 `AllowedOrigins`에 프론트엔드 도메인 추가:
-
+SPA 라우팅 설정 (`frontend/vercel.json`):
 ```json
-{
-  "AllowedOrigins": [
-    "https://davemins.com",
-    "https://www.davemins.com"
-  ]
-}
+{ "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }] }
 ```
 
-```bash
-cd backend
-dotnet publish -c Release -o ./publish
-# publish/ 폴더를 EC2에 배포
-```
+### 백엔드 (Render)
+
+`backend/Dockerfile`로 Docker 배포.
+
+Render 환경변수:
+- `ALLOWED_ORIGINS` = 프론트엔드 Vercel 도메인 (쉼표로 여러 개 가능)
+
+자세한 배포 가이드는 `logs/phase-6.md` 참고.
