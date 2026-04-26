@@ -12,6 +12,12 @@ var allowedOrigins = builder.Configuration
     .GetSection("AllowedOrigins")
     .Get<string[]>() ?? ["http://localhost:5173"];
 
+// Render 등 배포 환경에서 ALLOWED_ORIGINS 환경변수로 추가 도메인 지정 (쉼표 구분)
+var extraOrigins = Environment.GetEnvironmentVariable("ALLOWED_ORIGINS")
+    ?.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+    ?? [];
+allowedOrigins = [.. allowedOrigins, .. extraOrigins];
+
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
