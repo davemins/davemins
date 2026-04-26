@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Update="content\**\*" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <!-- Remove 후 Include: .json(암묵적 포함)과 .md(미포함) 모두 명시적으로 등록 -->
+    <Content Remove="content\**\*" />
+    <Content Include="content\**\*" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>
