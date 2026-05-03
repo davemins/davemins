@@ -1,10 +1,10 @@
 {
   "name": "davemins",
-  "role": "크리에이터",
-  "bio": "영상, 디자인, 코드로 이야기를 만드는 크리에이터입니다. IT 회사 PM 경험을 바탕으로 콘텐츠와 제품을 함께 만들어갑니다.",
-  "skills": ["영상 촬영 · 편집", "모션 그래픽", "UI/UX 디자인", "프론트엔드 개발"],
+  "role": "MES Engineer @ Hyundai Mobis Mexico",
+  "bio": "멕시코 자동차 부품 공장에서 제조 시스템을 다루며 매주 기록합니다.",
+  "skills": ["MES / PLC", "MSSQL", "C# / .NET", "Java / Spring Boot", "Power Automate"],
   "socialLinks": [
-    { "platform": "GitHub", "url": "https://github.com/davemins" },
-    { "platform": "Instagram", "url": "https://instagram.com/davemins" }
+    { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/davemins" },
+    { "platform": "GitHub", "url": "https://github.com/davemins" }
   ]
 }
