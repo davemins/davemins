@@ -1,6 +1,6 @@
 export const en = {
   home: {
-    tagline: 'Making stories\nwith video, design, and code.',
+    tagline: 'A Korean working in Mexico.\nMaking things occasionally.',
     whoDesc: 'who I am',
     whatDesc: 'what I\'ve made',
     howDesc: 'how I think',

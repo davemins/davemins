@@ -1,8 +1,14 @@
 {
   "name": "MIN SEOK KIM (davemins)",
-  "role": "MES Engineer @ Hyundai Mobis Mexico",
-  "bio": "Trabajando con sistemas de manufactura en una planta de autopartes en México. Documentando cada semana.",
-  "skills": ["MES / PLC", "MSSQL", "C# / .NET", "Java / Spring Boot", "Power Automate"],
+  "bio": [
+    "Un coreano trabajando en México.",
+    "Haciendo cosas de vez en cuando."
+  ],
+  "makes": ["escritura", "foto", "música", "video", "web"],
+  "experience": [
+    { "title": "MES Engineer", "company": "Hyundai Mobis Mexico", "period": "2025.06~" },
+    { "title": "Backend Developer", "company": "Lucentblock", "period": "2024.05~2024.08" }
+  ],
   "socialLinks": [
     { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/davemins" },
     { "platform": "GitHub", "url": "https://github.com/davemins" }

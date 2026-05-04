@@ -12,21 +12,39 @@ function WhoPage() {
     <main className={styles.main}>
       <section className={styles.profile}>
         <h1 className={styles.name}>{data?.name}</h1>
-        <p className={styles.role}>{data?.role}</p>
-        <p className={styles.bio}>{data?.bio}</p>
+        <div className={styles.bio}>
+          {data?.bio.map((line, i) => (
+            <p key={i}>{line}</p>
+          ))}
+        </div>
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>skills</h2>
-        <ul className={styles.skills}>
-          {data?.skills.map((skill) => (
-            <li key={skill} className={styles.skill}>{skill}</li>
+        <h2 className={styles.sectionTitle}>MAKES</h2>
+        <ul className={styles.pills}>
+          {data?.makes.map((item) => (
+            <li key={item} className={styles.pill}>{item}</li>
           ))}
         </ul>
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>links</h2>
+        <h2 className={styles.sectionTitle}>EXPERIENCE</h2>
+        <ul className={styles.expList}>
+          {data?.experience.map((exp, i) => (
+            <li key={i} className={styles.expItem}>
+              <span className={styles.expTitle}>{exp.title}</span>
+              <span className={styles.expSep}>·</span>
+              <span className={styles.expCompany}>@{exp.company}</span>
+              <span className={styles.expSep}>·</span>
+              <span className={styles.expPeriod}>{exp.period}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>LINKS</h2>
         <ul className={styles.links}>
           {data?.socialLinks.map(({ platform, url }) => (
             <li key={platform}>

@@ -3,10 +3,16 @@ export interface SocialLink {
   url: string
 }
 
+export interface Experience {
+  title: string
+  company: string
+  period: string
+}
+
 export interface WhoData {
   name: string
-  role: string
-  bio: string
-  skills: string[]
+  bio: string[]
+  makes: string[]
+  experience: Experience[]
   socialLinks: SocialLink[]
 }

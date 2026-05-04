@@ -1,6 +1,6 @@
 export const ko = {
   home: {
-    tagline: '영상, 디자인, 코드로\n이야기를 만듭니다.',
+    tagline: '멕시코에서 일하는 한국인입니다.\n가끔 뭔가를 만듭니다.',
     whoDesc: '어떤 사람인지',
     whatDesc: '무엇을 만들었는지',
     howDesc: '어떻게 생각하는지',

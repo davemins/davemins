@@ -1,8 +1,14 @@
 {
   "name": "김민석 (davemins)",
-  "role": "MES Engineer @ Hyundai Mobis Mexico",
-  "bio": "멕시코 자동차 부품 공장에서 제조 시스템을 다루며 매주 기록합니다.",
-  "skills": ["MES / PLC", "MSSQL", "C# / .NET", "Java / Spring Boot", "Power Automate"],
+  "bio": [
+    "멕시코에서 일하는 한국인입니다.",
+    "가끔 뭔가를 만듭니다."
+  ],
+  "makes": ["글", "사진", "음악", "영상", "웹"],
+  "experience": [
+    { "title": "MES Engineer", "company": "Hyundai Mobis Mexico", "period": "2025.06~" },
+    { "title": "Backend Developer", "company": "Lucentblock", "period": "2024.05~2024.08" }
+  ],
   "socialLinks": [
     { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/davemins" },
     { "platform": "GitHub", "url": "https://github.com/davemins" }
