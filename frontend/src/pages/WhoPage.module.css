@@ -123,4 +123,16 @@
   .name {
     font-size: var(--text-2xl);
   }
+
+  .expList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .expItem {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
 }
