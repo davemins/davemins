@@ -67,7 +67,7 @@
 .expList {
   list-style: none;
   display: grid;
-  grid-template-columns: max-content max-content 1fr;
+  grid-template-columns: max-content max-content max-content;
   align-items: center;
   row-gap: var(--space-3);
   column-gap: var(--space-6);
@@ -75,7 +75,6 @@
 
 .expItem {
   display: contents;
-  font-size: var(--text-sm);
 }
 
 .expTitle {
@@ -91,10 +90,6 @@
 .expPeriod {
   color: var(--fg-subtle);
   font-size: var(--text-xs);
-}
-
-.expSep {
-  display: none;
 }
 
 .links {
@@ -127,12 +122,14 @@
   .expList {
     display: flex;
     flex-direction: column;
-    gap: var(--space-4);
+    align-items: flex-start;
+    gap: var(--space-5);
   }
 
   .expItem {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: var(--space-1);
   }
 }

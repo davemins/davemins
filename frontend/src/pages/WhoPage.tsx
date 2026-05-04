@@ -34,9 +34,7 @@ function WhoPage() {
           {data?.experience.map((exp, i) => (
             <li key={i} className={styles.expItem}>
               <span className={styles.expTitle}>{exp.title}</span>
-              <span className={styles.expSep}>·</span>
               <span className={styles.expCompany}>@{exp.company}</span>
-              <span className={styles.expSep}>·</span>
               <span className={styles.expPeriod}>{exp.period}</span>
             </li>
           ))}
