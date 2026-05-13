@@ -1,6 +1,6 @@
 ---
 title: Mi semana
-date: 2026-05-12
+publishedAt: 2026-05-12
 summary: Que todo se rompa.
 ---
 

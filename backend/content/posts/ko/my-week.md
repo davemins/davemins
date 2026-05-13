@@ -1,6 +1,6 @@
 ---
 title: 나의 한 주
-date: 2026-05-12
+publishedAt: 2026-05-12
 summary: 그냥 망해보자.
 ---
 
