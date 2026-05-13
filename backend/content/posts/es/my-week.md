@@ -1,6 +1,7 @@
 ---
 title: Mi semana
 date: 2026-05-12
+summary: Que todo se rompa.
 ---
 
 Que todo se rompa.

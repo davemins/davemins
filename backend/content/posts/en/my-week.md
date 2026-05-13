@@ -1,6 +1,7 @@
 ---
 title: My Week
 date: 2026-05-12
+summary: Let's just crash and burn.
 ---
 
 Let's just crash and burn.
